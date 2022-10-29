@@ -55,6 +55,7 @@ namespace Tests
         {
             Setup();
             bool result = crawler.LoadMapFromFile("Simple.map");
+            Assert.True(result, "The Simple.map should be loadable from the maps folder");
             Assert.False(crawler.GetOriginalMap().Equals(crawler.GetCurrentMapState()), "Map loading is not working: Original and Current Map should not use the same underlying object or shared data.");
         }
 
